@@ -133,54 +133,68 @@ const Contact = () => {
 
       <section
         id="contact"
-        className="min-h-screen flex items-center justify-center text-white py-20 px-4"
+        className="text-white py-16 px-4 relative overflow-hidden"
         style={{
           backgroundColor: '#0a0a0a',
           backgroundImage:
-            'repeating-linear-gradient(0deg, rgba(0,255,255,0.1), rgba(0,255,255,0.1) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(0,255,255,0.1), rgba(0,255,255,0.1) 1px, transparent 1px, transparent 40px)',
+            'repeating-linear-gradient(0deg, rgba(139,92,246,0.08), rgba(139,92,246,0.08) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(0,255,255,0.08), rgba(0,255,255,0.08) 1px, transparent 1px, transparent 40px)',
           backgroundSize: '40px 40px',
         }}
       >
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl relative z-10">
           {/* Left Panel */}
           <div
-            className="p-8 rounded-2xl shadow-xl space-y-6"
+            className="p-8 rounded-2xl shadow-2xl space-y-6 border"
             style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1))',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              borderColor: 'rgba(139, 92, 246, 0.3)',
             }}
           >
-            <h2 className="text-4xl font-bold text-[#00d9ff] mb-4">Get In Touch</h2>
-            <h3 className="text-2xl font-semibold mb-2 text-[#00d9ff]">
-              Let's <span className="text-[#00ffc3]">Connect</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+                Get In Touch
+              </span>
+            </h2>
+            <h3 className="text-2xl font-semibold mb-2">
+              Let's <span className="text-cyan-400">Connect</span>
             </h3>
-            <p className="text-[#d1d5db]">
+            <p className="text-gray-300">
               Feel free to reach out for collaborations or just a friendly hello
             </p>
 
-            <div className="space-y-4 text-[#d1d5db]">
-              <div className="flex items-center gap-4">
-                <FaEnvelope className="text-[#00ffc3] text-xl" />
+            <div className="space-y-4 text-gray-300">
+              <div className="flex items-center gap-4 hover:text-cyan-400 transition-colors">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50">
+                  <FaEnvelope className="text-white text-xl" />
+                </div>
                 <span>davidbeniel2006@gmail.com</span>
               </div>
-              <div className="flex items-center gap-4">
-                <FaPhone className="text-[#00ffc3] text-xl" />
+              <div className="flex items-center gap-4 hover:text-cyan-400 transition-colors">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50">
+                  <FaPhone className="text-white text-xl" />
+                </div>
                 <span>9840488355</span>
               </div>
-              <div className="flex items-center gap-4">
-                <FaMapMarkerAlt className="text-[#00ffc3] text-xl" />
+              <div className="flex items-center gap-4 hover:text-cyan-400 transition-colors">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50">
+                  <FaMapMarkerAlt className="text-white text-xl" />
+                </div>
                 <span>Chennai, Tamil Nadu</span>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-5 pt-6 text-2xl text-[#00ffc3]">
+            <div className="flex flex-wrap gap-4 pt-6">
               <a
                 href="https://github.com/Klassy01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="p-3 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white text-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50"
                 aria-label="GitHub"
               >
                 <FaGithub />
@@ -189,16 +203,16 @@ const Contact = () => {
                 href="https://linkedin.com/in/davidjayaraja01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="p-3 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white text-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/50"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://instagram.com/yourusername"
+                href="https://instagram.com/david_jayaraj_01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="p-3 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white text-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/50"
                 aria-label="Instagram"
               >
                 <FaInstagram />
@@ -207,7 +221,7 @@ const Contact = () => {
                 href="https://wa.me/919840488355"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="p-3 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white text-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/50"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp />
@@ -216,7 +230,7 @@ const Contact = () => {
                 href="https://facebook.com/klassy.dj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="p-3 rounded-lg bg-gradient-to-r from-purple-600/50 to-cyan-600/50 hover:from-purple-600 hover:to-cyan-600 text-white text-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/50"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
@@ -227,13 +241,13 @@ const Contact = () => {
           {/* Right Panel - Form */}
           <form
             ref={formRef}
-            className="p-8 rounded-2xl shadow-xl space-y-6"
+            className="p-8 rounded-2xl shadow-2xl space-y-6 border"
             id="contactForm"
             style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1))',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              borderColor: 'rgba(6, 182, 212, 0.3)',
             }}
           >
             <input
@@ -252,7 +266,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 bg-black bg-opacity-30 border border-[#00d9ff] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00d9ff]"
+              className="w-full px-4 py-3 bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
             />
             <input
               type="email"
@@ -261,7 +275,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 bg-black bg-opacity-30 border border-[#00d9ff] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00d9ff]"
+              className="w-full px-4 py-3 bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
             />
             <textarea
               name="message"
@@ -270,7 +284,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 bg-black bg-opacity-30 border border-[#00d9ff] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00d9ff]"
+              className="w-full px-4 py-3 bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
             ></textarea>
             <input
               type="tel"
@@ -278,7 +292,7 @@ const Contact = () => {
               placeholder="Your Phone Number"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-black bg-opacity-30 border border-[#00d9ff] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00d9ff]"
+              className="w-full px-4 py-3 bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
             />
             <div
               ref={statusRef}
@@ -290,9 +304,13 @@ const Contact = () => {
               type="submit"
               ref={submitButtonRef}
               id="submitButton"
-              className="w-full py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold rounded-xl transition duration-300 flex items-center justify-center gap-2 hover:bg-white/30 hover:border-white hover:shadow-lg hover:scale-[1.05] active:scale-95"
+              className="group relative w-full py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105 active:scale-95"
             >
-              <span>Send Message</span> <span>✈️</span>
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="relative flex items-center gap-2">
+                <span>Send Message</span> 
+                <span>✈️</span>
+              </span>
             </button>
           </form>
         </div>

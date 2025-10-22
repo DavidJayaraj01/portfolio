@@ -19,26 +19,28 @@ const Navbar = () => {
   };
 
   const linkStyle =
-    'relative text-white hover:text-cyan-400 transition duration-300 hover:after:w-full after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300';
+    'relative text-white hover:text-cyan-400 transition duration-300 hover:after:w-full after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-purple-500 after:to-cyan-500 after:transition-all after:duration-300';
 
   const backgroundStyle = {
-    backgroundColor: '#0a0a0a',
+    backgroundColor: 'rgba(10, 10, 10, 0.95)',
     backgroundImage:
-      'repeating-linear-gradient(0deg, rgba(0,255,255,0.1), rgba(0,255,255,0.1) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(0,255,255,0.1), rgba(0,255,255,0.1) 1px, transparent 1px, transparent 40px)',
+      'repeating-linear-gradient(0deg, rgba(139,92,246,0.05), rgba(139,92,246,0.05) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(0,255,255,0.05), rgba(0,255,255,0.05) 1px, transparent 1px, transparent 40px)',
     backgroundSize: '40px 40px',
-    backgroundBlendMode: 'screen',
+    backdropFilter: 'blur(10px)',
   };
 
   return (
     <nav
-      className={`fixed top-0 w-full z-10 transition-all duration-300 ${
-        scrolled ? 'shadow-lg' : ''
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'shadow-lg shadow-purple-500/10' : ''
       }`}
       style={backgroundStyle}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-white">
-          David Jayaraj
+        <a href="#home" className="text-2xl font-bold">
+          <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+            David Jayaraj
+          </span>
         </a>
 
         {/* Icon Button */}
