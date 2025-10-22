@@ -1,11 +1,10 @@
 import React from "react";
-import resumePDF from "../assets/DJ_Resume.pdf";
 
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = resumePDF;
-    link.download = "DJ_Resume.pdf";
+    link.href = "/assets/DJ-Resume.pdf";
+    link.download = "DJ-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
