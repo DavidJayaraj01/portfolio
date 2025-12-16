@@ -13,7 +13,7 @@ const Projects = () => {
         'Real-time dashboard with analytics and QBR generation',
         'Production deployment with PostgreSQL database',
       ],
-      github: 'https://github.com/Klassy01/AI-Calling-Intelligence',
+      github: 'https://github.com/DavidJayaraj01/AI-Calling-Intelligence',
     },
     {
       title: 'AI-Smarter-Shop: Industrial IoT Safety Monitoring',
@@ -26,7 +26,7 @@ const Projects = () => {
         'FastAPI + React + TypeScript with SQLite/PostgreSQL database',
         'Interactive analytics dashboard with Recharts visualizations',
       ],
-      github: 'https://github.com/Klassy01/AI-Safety-Shop',
+      github: 'https://github.com/DavidJayaraj01/AI-Safety-Shop',
     },
     {
       title: 'AI-Powered Personal Tutor: Adaptive Learning System',
@@ -39,7 +39,7 @@ const Projects = () => {
         'FastAPI + React + TypeScript with SQLAlchemy & WebSocket',
         'JWT authentication with comprehensive security features',
       ],
-      github: 'https://github.com/Klassy01/Tutor',
+      github: 'https://github.com/DavidJayaraj01/Tutor',
     },
     {
       title: 'Scaling Trust: AI-Powered Detection of Online Harms',
@@ -50,7 +50,7 @@ const Projects = () => {
         'Real-time monitoring and harm detection',
         'AI-powered decision-making to reduce online toxicity',
       ],
-      github: 'https://github.com/Klassy01/Solution',
+      github: 'https://github.com/DavidJayaraj01/Solution',
     },
     {
       title: 'AI Multi-Source Summarizer',
@@ -63,7 +63,7 @@ const Projects = () => {
         'Persistent vector database with metadata tracking and management',
         'Interactive Q&A with source citations and chat history',
       ],
-      github: 'https://github.com/Klassy01/AI-Conent-Summarizer',
+      github: 'https://github.com/DavidJayaraj01/AI-Conent-Summarizer',
     },
     {
       title: 'IoTrix',
@@ -75,7 +75,7 @@ const Projects = () => {
         'Secure device authentication and communication',
         'Intelligent analytics and alerting system',
       ],
-      github: 'https://github.com/Klassy01/IoTrix',
+      github: 'https://github.com/DavidJayaraj01/IoTrix',
     },
   ];
 
