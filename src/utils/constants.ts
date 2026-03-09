@@ -60,7 +60,6 @@ export const skills: Skill[] = [
   { name: 'TypeScript', category: 'languages', icon: 'FileType' },
   { name: 'Java', category: 'languages', icon: 'Coffee' },
   { name: 'C', category: 'languages', icon: 'Terminal' },
-  { name: 'SQL', category: 'languages', icon: 'Database' },
   
   // App Development
   { name: 'Flutter', category: 'app', icon: 'Smartphone' },
@@ -84,7 +83,9 @@ export const skills: Skill[] = [
   { name: 'Docker', category: 'devops', icon: 'Container' },
   { name: 'Git', category: 'devops', icon: 'GitBranch' },
   { name: 'CI/CD', category: 'devops', icon: 'GitPullRequest' },
-  { name: 'Cloud Platforms', category: 'devops', icon: 'Cloud' },
+  { name: 'AWS', category: 'devops', icon: 'Cloud' },
+  { name: 'Azure', category: 'devops', icon: 'Cloud' },
+  { name: 'GCP', category: 'devops', icon: 'Cloud' },
   
   // AI/ML
   { name: 'TensorFlow', category: 'ai', icon: 'Brain' },
@@ -278,6 +279,7 @@ export const achievements: Achievement[] = [
     description: 'Built AI Call Intelligence Platform - an innovative AI solution for real-time call analytics and sentiment analysis.',
     icon: 'Trophy',
     featured: true,
+    photos: ['/Bi3.png', '/Bi3Dj.png'],
   },
   {
     id: 'code-o-clock',
@@ -287,6 +289,7 @@ export const achievements: Achievement[] = [
     prize: '₹15,000',
     description: 'Developed AI Smarter Shop system - intelligent retail analytics platform with computer vision.',
     icon: 'Medal',
+    photos: ['/CIt.png', '/Cit-DJ.png'],
   },
   {
     id: 'innovate-x',
@@ -296,6 +299,7 @@ export const achievements: Achievement[] = [
     prize: '₹2,000',
     description: 'Built AI-Agent for Automated Software Testing & Security Hardening with team Innovate-Z.',
     icon: 'Shield',
+    photos: ['/Innovatye z.jpeg', '/Innovate z.png'],
   },
   {
     id: 'google-gfg',
@@ -305,6 +309,7 @@ export const achievements: Achievement[] = [
     organization: 'National Level',
     description: 'Ranked in top 9 among thousands of participants in prestigious Google x GFG national hackathon.',
     icon: 'Target',
+    photos: ['/GoogleGeeks.png', '/Geeks.png'],
   },
   {
     id: 'dev-arena',
@@ -314,6 +319,7 @@ export const achievements: Achievement[] = [
     organization: 'SRM University',
     description: 'Awarded Best Project for exceptional innovation at SRM University hackathon.',
     icon: 'Star',
+    photos: ['/Dev.png', '/Dev-Dj.png'],
   },
 ];
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import * as Icons from 'lucide-react';
@@ -54,8 +54,8 @@ const Skills: React.FC = () => {
               onClick={() => setActiveTab(category)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === category
-                  ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white shadow-lg shadow-orange-500/30'
-                  : 'bg-dark-card border border-orange-500/30 text-slate-300 hover:border-orange-500/60'
+                  ? 'bg-gradient-to-r from-cyan-500 to-teal-400 text-white shadow-lg shadow-teal-400/30'
+                  : 'bg-dark-card border border-teal-400/30 text-slate-300 hover:border-teal-400/60'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -93,11 +93,11 @@ const Skills: React.FC = () => {
                 <div className="flex flex-col items-center gap-3">
                   {Icon && (
                     <motion.div 
-                      className="skill-icon p-4 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20 transition-all duration-500"
+                      className="skill-icon p-4 rounded-full bg-gradient-to-br from-cyan-500/20 to-teal-400/20 transition-all duration-500"
                       whileHover={{ rotate: 360, scale: 1.2 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <Icon size={32} className="text-orange-500 group-hover:text-red-400 transition-colors duration-300" />
+                      <Icon size={32} className="text-teal-300 group-hover:text-cyan-400 transition-colors duration-300" />
                     </motion.div>
                   )}
                   <span className="text-slate-200 font-medium group-hover:text-white transition-colors duration-300">{skill.name}</span>
@@ -112,3 +112,4 @@ const Skills: React.FC = () => {
 };
 
 export default Skills;
+

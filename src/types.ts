@@ -34,6 +34,7 @@ export interface Achievement {
   description: string;
   icon: string;
   featured?: boolean;
+  photos?: string[];
 }
 
 export interface Skill {

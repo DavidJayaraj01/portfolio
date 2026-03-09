@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { personalInfo, navItems } from '../utils/constants';
 import GradientText from './GradientText';
 import SocialLinks from './SocialLinks';
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-dark-bg/80 border-t border-orange-500/20">
+    <footer className="bg-dark-bg/80 border-t border-teal-400/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Left - Brand */}
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <button
                     onClick={() => scrollToSection(item.href)}
-                    className="text-slate-400 hover:text-orange-500 transition-colors"
+                    className="text-slate-400 hover:text-teal-300 transition-colors"
                   >
                     {item.name}
                   </button>
@@ -50,12 +50,12 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
-                <a href={`mailto:${personalInfo.email}`} className="hover:text-orange-500 transition-colors">
+                <a href={`mailto:${personalInfo.email}`} className="hover:text-teal-300 transition-colors">
                   {personalInfo.email}
                 </a>
               </li>
               <li>
-                <a href={`tel:${personalInfo.phone}`} className="hover:text-orange-500 transition-colors">
+                <a href={`tel:${personalInfo.phone}`} className="hover:text-teal-300 transition-colors">
                   {personalInfo.phone}
                 </a>
               </li>
@@ -65,9 +65,9 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom - Copyright */}
-        <div className="pt-8 border-t border-orange-500/20 text-center">
+        <div className="pt-8 border-t border-teal-400/20 text-center">
           <p className="text-slate-400">
-            © {currentYear} {personalInfo.name}. All Rights Reserved.
+            (c) {currentYear} {personalInfo.name}. All Rights Reserved.
           </p>
         </div>
       </div>
@@ -76,3 +76,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

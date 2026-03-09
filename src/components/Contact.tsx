@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
           submitButton.disabled = true;
         } else {
           submitButton.classList.remove('loading');
-          submitButton.innerHTML = '<span>Send Message</span> ✈️';
+          submitButton.innerHTML = '<span>Send Message</span> <span>-&gt;</span>';
           submitButton.disabled = false;
         }
       }
@@ -136,18 +136,18 @@ const Contact: React.FC = () => {
           border: 1px solid rgba(34, 197, 94, 0.3);
         }
         .form-status.error {
-          color: #ef4444;
+          color: #4db9c4;
           padding: 12px;
           border-radius: 8px;
-          background: rgba(239, 68, 68, 0.1);
-          border: 1px solid rgba(239, 68, 68, 0.3);
+          background: rgba(77, 185, 196, 0.1);
+          border: 1px solid rgba(77, 185, 196, 0.3);
         }
       `}</style>
 
       <section id="contact" className="section-padding relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <motion.div
@@ -172,29 +172,29 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="p-8 rounded-2xl border space-y-6"
               style={{
-                background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(239, 68, 68, 0.1))',
+                background: 'linear-gradient(135deg, rgba(99, 199, 207, 0.1), rgba(77, 185, 196, 0.1))',
                 backdropFilter: 'blur(20px)',
-                borderColor: 'rgba(249, 115, 22, 0.3)',
+                borderColor: 'rgba(99, 199, 207, 0.3)',
               }}
             >
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
 
               <div className="space-y-4">
-                <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-4 text-slate-300 hover:text-orange-400 transition-colors group">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 group-hover:from-red-500/50 group-hover:to-orange-500/50 transition-all">
-                    <FaEnvelope className="text-orange-400 text-xl" />
+                <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-4 text-slate-300 hover:text-teal-300 transition-colors group">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 group-hover:from-cyan-500/50 group-hover:to-teal-400/50 transition-all">
+                    <FaEnvelope className="text-teal-300 text-xl" />
                   </div>
                   <span>{personalInfo.email}</span>
                 </a>
-                <a href={`tel:${personalInfo.phone}`} className="flex items-center gap-4 text-slate-300 hover:text-orange-400 transition-colors group">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 group-hover:from-red-500/50 group-hover:to-orange-500/50 transition-all">
-                    <FaPhone className="text-orange-400 text-xl" />
+                <a href={`tel:${personalInfo.phone}`} className="flex items-center gap-4 text-slate-300 hover:text-teal-300 transition-colors group">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 group-hover:from-cyan-500/50 group-hover:to-teal-400/50 transition-all">
+                    <FaPhone className="text-teal-300 text-xl" />
                   </div>
                   <span>{personalInfo.phone}</span>
                 </a>
                 <div className="flex items-center gap-4 text-slate-300">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30">
-                    <FaMapMarkerAlt className="text-orange-400 text-xl" />
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30">
+                    <FaMapMarkerAlt className="text-teal-300 text-xl" />
                   </div>
                   <span>{personalInfo.location}</span>
                 </div>
@@ -207,7 +207,7 @@ const Contact: React.FC = () => {
                     href="https://github.com/DavidJayaraj01"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 hover:from-red-500 hover:to-orange-500 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/50"
+                    className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 hover:from-cyan-500 hover:to-teal-400 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-teal-400/50"
                   >
                     <FaGithub />
                   </a>
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                     href="https://linkedin.com/in/davidjayaraja01"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 hover:from-red-500 hover:to-orange-500 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/50"
+                    className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 hover:from-cyan-500 hover:to-teal-400 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-teal-400/50"
                   >
                     <FaLinkedinIn />
                   </a>
@@ -223,7 +223,7 @@ const Contact: React.FC = () => {
                     href="https://instagram.com/david_jayaraj_01"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 hover:from-red-500 hover:to-orange-500 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/50"
+                    className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 hover:from-cyan-500 hover:to-teal-400 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/50"
                   >
                     <FaInstagram />
                   </a>
@@ -231,7 +231,7 @@ const Contact: React.FC = () => {
                     href="https://wa.me/919840488355"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 hover:from-red-500 hover:to-orange-500 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/50"
+                    className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 hover:from-cyan-500 hover:to-teal-400 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/50"
                   >
                     <FaWhatsapp />
                   </a>
@@ -239,7 +239,7 @@ const Contact: React.FC = () => {
                     href="https://facebook.com/klassy.dj"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-gradient-to-r from-red-500/30 to-orange-500/30 hover:from-red-500 hover:to-orange-500 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/50"
+                    className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/30 to-teal-400/30 hover:from-cyan-500 hover:to-teal-400 text-white text-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/50"
                   >
                     <FaFacebookF />
                   </a>
@@ -255,9 +255,9 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="p-8 rounded-2xl border space-y-5"
               style={{
-                background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(249, 115, 22, 0.1))',
+                background: 'linear-gradient(135deg, rgba(77, 185, 196, 0.1), rgba(99, 199, 207, 0.1))',
                 backdropFilter: 'blur(20px)',
-                borderColor: 'rgba(239, 68, 68, 0.3)',
+                borderColor: 'rgba(77, 185, 196, 0.3)',
               }}
             >
               <input
@@ -279,7 +279,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-bg/50 border border-orange-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-500"
+                  className="w-full px-4 py-3 bg-dark-bg/50 border border-teal-400/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all placeholder-slate-500"
                 />
               </div>
               <div>
@@ -290,7 +290,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-bg/50 border border-orange-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-500"
+                  className="w-full px-4 py-3 bg-dark-bg/50 border border-teal-400/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all placeholder-slate-500"
                 />
               </div>
               <div>
@@ -300,7 +300,7 @@ const Contact: React.FC = () => {
                   placeholder="Your Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-dark-bg/50 border border-orange-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all placeholder-slate-500"
+                  className="w-full px-4 py-3 bg-dark-bg/50 border border-teal-400/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all placeholder-slate-500"
                 />
               </div>
               <div>
@@ -311,7 +311,7 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-bg/50 border border-orange-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none placeholder-slate-500"
+                  className="w-full px-4 py-3 bg-dark-bg/50 border border-teal-400/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all resize-none placeholder-slate-500"
                 ></textarea>
               </div>
               
@@ -324,12 +324,12 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 ref={submitButtonRef}
-                className="group relative w-full py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 active:scale-95"
+                className="group relative w-full py-4 bg-gradient-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-2xl hover:shadow-teal-400/50 hover:scale-105 active:scale-95"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-teal-400 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative flex items-center gap-2">
                   <span>Send Message</span> 
-                  <span>✈️</span>
+                  <span>{'->'}</span>
                 </span>
               </button>
             </motion.form>
@@ -341,3 +341,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+

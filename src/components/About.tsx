@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { MapPin, Mail, Phone } from 'lucide-react';
@@ -17,7 +17,7 @@ const About: React.FC = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div 
-          className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-teal-400/10 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -25,7 +25,7 @@ const About: React.FC = () => {
           transition={{ duration: 5, repeat: Infinity }}
         />
         <motion.div 
-          className="absolute bottom-20 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.5, 0.3],
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             <div className="relative w-full max-w-md mx-auto">
               {/* Animated gradient border */}
               <motion.div
-                className="absolute -inset-1 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 rounded-2xl opacity-75 blur-sm"
+                className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-300 rounded-2xl opacity-75 blur-sm"
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
@@ -69,7 +69,7 @@ const About: React.FC = () => {
               />
               
               {/* Image container */}
-              <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-orange-500/30 bg-dark-card">
+              <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-teal-400/30 bg-dark-card">
                 <img 
                   src="/david.png" 
                   alt="David Jayaraj A"
@@ -86,12 +86,12 @@ const About: React.FC = () => {
               
               {/* Decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"
+                className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-full"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
               <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full"
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-teal-400 to-emerald-300 rounded-full"
                 animate={{ scale: [1.2, 1, 1.2] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
@@ -106,15 +106,15 @@ const About: React.FC = () => {
                 className="card flex items-center gap-3 glow-hover"
                 whileHover={{ x: 10, scale: 1.02 }}
               >
-                <MapPin className="text-orange-500" size={20} />
+                <MapPin className="text-teal-300" size={20} />
                 <span className="text-slate-300">{personalInfo.location}</span>
               </motion.div>
               <motion.div 
                 className="card flex items-center gap-3 glow-hover"
                 whileHover={{ x: 10, scale: 1.02 }}
               >
-                <Mail className="text-orange-500" size={20} />
-                <a href={`mailto:${personalInfo.email}`} className="text-slate-300 hover:text-orange-500 transition-colors">
+                <Mail className="text-teal-300" size={20} />
+                <a href={`mailto:${personalInfo.email}`} className="text-slate-300 hover:text-teal-300 transition-colors">
                   {personalInfo.email}
                 </a>
               </motion.div>
@@ -122,8 +122,8 @@ const About: React.FC = () => {
                 className="card flex items-center gap-3 glow-hover"
                 whileHover={{ x: 10, scale: 1.02 }}
               >
-                <Phone className="text-orange-500" size={20} />
-                <a href={`tel:${personalInfo.phone}`} className="text-slate-300 hover:text-orange-500 transition-colors">
+                <Phone className="text-teal-300" size={20} />
+                <a href={`tel:${personalInfo.phone}`} className="text-slate-300 hover:text-teal-300 transition-colors">
                   {personalInfo.phone}
                 </a>
               </motion.div>
@@ -158,3 +158,4 @@ const About: React.FC = () => {
 };
 
 export default About;
+

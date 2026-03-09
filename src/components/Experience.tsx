@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Briefcase } from 'lucide-react';
@@ -16,7 +16,7 @@ const Experience: React.FC = () => {
     <section id="experience" className="section-padding bg-dark-bg/50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-400/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -27,8 +27,8 @@ const Experience: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-orange-500/30 mb-6">
-            <Briefcase className="w-5 h-5 text-orange-500" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-teal-400/20 border border-teal-400/30 mb-6">
+            <Briefcase className="w-5 h-5 text-teal-300" />
             <span className="text-sm font-medium text-slate-300">Professional Experience</span>
           </div>
           
@@ -52,3 +52,4 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
+

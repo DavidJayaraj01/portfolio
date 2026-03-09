@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Mail, Code, Cpu, Database, Rocket, Sparkles, Zap } from 'lucide-react';
 import { personalInfo, stats } from '../utils/constants';
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none">
         {/* Gradient Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/20 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-400/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             x: [0, -50, 0],
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/2 right-1/3 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"
+          className="absolute top-1/2 right-1/3 w-64 h-64 bg-emerald-300/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -109,12 +109,12 @@ const Hero: React.FC = () => {
               ease: "easeInOut",
             }}
           >
-            <Icon className="w-8 h-8 text-orange-500/30" />
+            <Icon className="w-8 h-8 text-teal-300/30" />
           </motion.div>
         ))}
 
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(249,115,22,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(249,115,22,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(99,199,207,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,199,207,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
@@ -135,7 +135,7 @@ const Hero: React.FC = () => {
                 And I'm a{' '}
                 <span className="inline-block">
                   <GradientText>{displayedText}</GradientText>
-                  <span className="animate-pulse text-orange-500">|</span>
+                  <span className="animate-pulse text-teal-300">|</span>
                 </span>
               </h2>
             </motion.div>
@@ -154,7 +154,7 @@ const Hero: React.FC = () => {
               <Button variant="primary" onClick={scrollToProjects} icon={<ArrowRight size={18} />}>
                 View My Work
               </Button>
-              <Button variant="secondary" href="/resume.pdf" icon={<Download size={18} />}>
+              <Button variant="secondary" href="/DJ_RESUME new.pdf" icon={<Download size={18} />}>
                 Download Resume
               </Button>
               <Button variant="outline" onClick={scrollToContact} icon={<Mail size={18} />}>
@@ -177,24 +177,24 @@ const Hero: React.FC = () => {
             <div className="relative w-full aspect-square max-w-sm lg:max-w-md mx-auto">
               {/* Animated Rings */}
               <motion.div
-                className="absolute inset-0 border-2 border-dashed border-orange-500/20 rounded-full"
+                className="absolute inset-0 border-2 border-dashed border-teal-400/20 rounded-full"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute inset-8 border-2 border-dashed border-red-500/20 rounded-full"
+                className="absolute inset-8 border-2 border-dashed border-cyan-500/20 rounded-full"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute inset-16 border-2 border-dashed border-yellow-500/20 rounded-full"
+                className="absolute inset-16 border-2 border-dashed border-emerald-300/20 rounded-full"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
 
               {/* Orbiting Dots */}
               <motion.div
-                className="absolute w-4 h-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full shadow-lg shadow-orange-500/50"
+                className="absolute w-4 h-4 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-full shadow-lg shadow-teal-400/50"
                 style={{ top: '50%', left: '0%' }}
                 animate={{
                   rotate: 360,
@@ -203,7 +203,7 @@ const Hero: React.FC = () => {
                 initial={{ rotate: 0 }}
               />
               <motion.div
-                className="absolute w-3 h-3 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full shadow-lg shadow-yellow-500/50"
+                className="absolute w-3 h-3 bg-gradient-to-r from-teal-400 to-emerald-300 rounded-full shadow-lg shadow-emerald-300/50"
                 style={{ top: '0%', left: '50%' }}
                 animate={{
                   rotate: -360,
@@ -218,18 +218,18 @@ const Hero: React.FC = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
               >
-                <div className="text-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-orange-500/30 backdrop-blur-sm">
+                <div className="text-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-teal-400/10 border border-teal-400/30 backdrop-blur-sm">
                   <motion.div
-                    className="text-4xl sm:text-6xl mb-2"
+                    className="text-3xl sm:text-4xl mb-2 text-teal-300 font-bold"
                     animate={{
                       y: [0, -10, 0],
                       rotate: [0, 5, -5, 0],
                     }}
                     transition={{ duration: 3, repeat: Infinity }}
                   >
-                    🚀
+                    AI
                   </motion.div>
-                  <p className="text-orange-400 font-semibold text-xs sm:text-sm">Innovating with AI</p>
+                  <p className="text-teal-300 font-semibold text-xs sm:text-sm">Innovating with AI</p>
                 </div>
               </motion.div>
 
@@ -237,7 +237,7 @@ const Hero: React.FC = () => {
               {['React', 'AI', 'Python', 'ML'].map((tech, idx) => (
                 <motion.div
                   key={tech}
-                  className="absolute px-2 sm:px-3 py-1 rounded-full bg-dark-card/80 border border-orange-500/30 text-xs text-orange-400 font-medium backdrop-blur-sm"
+                  className="absolute px-2 sm:px-3 py-1 rounded-full bg-dark-card/80 border border-teal-400/30 text-xs text-teal-300 font-medium backdrop-blur-sm"
                   style={{
                     top: `${50 + 42 * Math.sin((idx * Math.PI) / 2)}%`,
                     left: `${50 + 42 * Math.cos((idx * Math.PI) / 2)}%`,
@@ -262,7 +262,7 @@ const Hero: React.FC = () => {
 
         {/* Stats Counter */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-20 pt-8 sm:pt-12 border-t border-orange-500/20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-20 pt-8 sm:pt-12 border-t border-teal-400/20"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -283,3 +283,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+

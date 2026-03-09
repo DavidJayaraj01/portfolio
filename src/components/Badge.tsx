@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -8,9 +8,9 @@ interface BadgeProps {
 
 const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', className = '' }) => {
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-red-500 to-orange-500',
+    primary: 'bg-gradient-to-r from-cyan-500 to-teal-400',
     success: 'bg-green-500',
-    info: 'bg-yellow-500',
+    info: 'bg-emerald-300',
     warning: 'bg-amber-500'
   };
 
@@ -22,3 +22,4 @@ const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', className 
 };
 
 export default Badge;
+

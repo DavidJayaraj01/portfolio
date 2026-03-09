@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { navItems, personalInfo } from '../utils/constants';
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark-bg/95 backdrop-blur-md shadow-lg shadow-orange-500/10' : 'bg-transparent'
+        isScrolled ? 'bg-dark-bg/95 backdrop-blur-md shadow-lg shadow-teal-400/10' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -68,13 +68,13 @@ const Navbar: React.FC = () => {
                 onClick={() => scrollToSection(item.href)}
                 className={`text-sm lg:text-base font-medium transition-all duration-300 relative group ${
                   activeSection === item.href.substring(1)
-                    ? 'text-orange-500'
+                    ? 'text-teal-300'
                     : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {item.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-red-500 to-orange-500 transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-500 to-teal-400 transition-all duration-300 ${
                     activeSection === item.href.substring(1) ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}
                 />
@@ -99,15 +99,15 @@ const Navbar: React.FC = () => {
         animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="px-4 pt-2 pb-4 space-y-2 bg-dark-card/95 backdrop-blur-md border-t border-orange-500/20">
+        <div className="px-4 pt-2 pb-4 space-y-2 bg-dark-card/95 backdrop-blur-md border-t border-teal-400/20">
           {navItems.map((item) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
               className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-300 ${
                 activeSection === item.href.substring(1)
-                  ? 'bg-orange-500/20 text-orange-500'
-                  : 'text-slate-300 hover:bg-orange-500/10 hover:text-white'
+                  ? 'bg-teal-400/20 text-teal-300'
+                  : 'text-slate-300 hover:bg-teal-400/10 hover:text-white'
               }`}
             >
               {item.name}
@@ -120,3 +120,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+

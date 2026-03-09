@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -26,7 +26,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-orange-500 transition-colors duration-300"
+            className="text-slate-400 hover:text-teal-300 transition-colors duration-300"
             whileHover={{ scale: 1.2, y: -3 }}
             whileTap={{ scale: 0.9 }}
             title={link.name}
@@ -41,3 +41,4 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
 };
 
 export default SocialLinks;
+

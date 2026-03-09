@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -10,13 +10,13 @@ export default {
         dark: {
           bg: '#0a0a0f',
           card: '#1a1a1f',
-          border: 'rgba(249, 115, 22, 0.3)',
+          border: 'rgba(99, 199, 207, 0.3)',
         },
         accent: {
-          primary: '#f97316',
-          secondary: '#ef4444',
-          orange: '#f97316',
-          red: '#ef4444',
+          primary: '#63c7cf',
+          secondary: '#4db9c4',
+          orange: '#63c7cf',
+          red: '#4db9c4',
         }
       },
       fontFamily: {
@@ -45,3 +45,4 @@ export default {
   },
   plugins: [],
 }
+
