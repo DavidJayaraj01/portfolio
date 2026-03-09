@@ -309,7 +309,7 @@ export const achievements: Achievement[] = [
     organization: 'National Level',
     description: 'Ranked in top 9 among thousands of participants in prestigious Google x GFG national hackathon.',
     icon: 'Target',
-    photos: ['/GoogleGeeks.png', '/Geeks.png'],
+    photos: ['/Geeks.png', '/GoogleGeeks.png'],
   },
   {
     id: 'dev-arena',
